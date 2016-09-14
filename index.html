@@ -1,36 +1,89 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en-us">
-  <head>
+<head>
     <meta charset="UTF-8">
-    <title>Blogger Documentation by fassetar</title>
+    <title>Unoffical Documentation</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>html body{width:100%;height:100%;padding:0;margin:0;overflow:hidden;font-family:arial;font-size:10px;color:#6e6e6e;background-color:#000}#preview-frame{width:100%;background-color:#fff}</style>
-  </head>
-      <body>
-             <iframe id="preview-frame" src="https://docs.google.com/document/d/1SlC5gyCF3axIzO124AzaLbWRcJte4xP9RZCO070jDVc/pub?embedded=true" name="preview-frame" frameborder="0" noresize="noresize"></iframe>
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-            <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-            try {
-              var pageTracker = _gat._getTracker("UA-41648493-11");
+    <style>
+        html body {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+            font-family: arial;
+            color: #6e6e6e;
+        }
+
+        #preview-frame {
+            width: 100%;
+        }
+
+        header {
+            position: fixed;
+            box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
+            top: 0;
+            width: 100%;
+            background-color: #ef6c00;
+            z-index: 10005;
+        }
+
+            header a {
+                color: white;
+            }
+
+            header img {
+                background: #fff;
+                border-radius: 50%;
+                display: inline-block;
+                height: 36px;
+                margin-right: 16px;
+                width: 36px;
+            }
+    </style>	https://developers.google.com/products/
+</head>
+<body>
+    <header>
+        <div class="devsite-product-name-wrapper">
+            <a class="devsite-product-name-link gc-analytics-event" href="https://developers.google.com/blogger/" data-category="Site-Wide Custom Events" data-label="Project logo (header)">
+                <img src="blogger.png" alt="Blogger">
+            </a>
+            <ul class="devsite-breadcrumb-list">
+                <li class="devsite-breadcrumb-item">
+                    <a href="https://developers.google.com/blogger/" class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Upper Header" data-value="1">
+                        Blogger
+                    </a>
+                </li>
+            </ul>
+            <a href="">Search</a>
+            <a href="https://developers.google.com/products/">All Products</a>
+        </div>
+    </header>
+    This Documentation's main and only concern is the snytax that goes along with blogger as well as the javascript used in the xml template.
+    <iframe id="preview-frame" src="https://docs.google.com/document/d/1SlC5gyCF3axIzO124AzaLbWRcJte4xP9RZCO070jDVc/pub?embedded=true" name="preview-frame" frameborder="0" noresize="noresize"></iframe>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        try {
+            var pageTracker = _gat._getTracker("UA-41648493-11");
             pageTracker._trackPageview();
-            
-            } catch(err) {}
-            
-            var calcHeight = function() {
-               $('#preview-frame').height($(window).height());
-             }
-             
-             $(document).ready(function() {
-               calcHeight();
-             }); 
-             
-             $(window).resize(function() {
-               calcHeight();
-             }).load(function() {
-               calcHeight();
-             });
-          </script>
-  </body>
+
+        } catch (err) { }
+
+        var calcHeight = function () {
+            $('#preview-frame').height($(window).height());
+        }
+
+        $(document).ready(function () {
+            calcHeight();
+        });
+
+        $(window).resize(function () {
+            calcHeight();
+        }).load(function () {
+            calcHeight();
+        });
+    </script>
+</body>
 </html>
