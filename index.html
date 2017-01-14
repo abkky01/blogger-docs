@@ -60,30 +60,68 @@
         </div>
     </header>
     This Documentation's main and only concern is the snytax that goes along with blogger as well as the javascript used in the xml template.
-    <iframe id="preview-frame" src="https://docs.google.com/document/d/1SlC5gyCF3axIzO124AzaLbWRcJte4xP9RZCO070jDVc/pub?embedded=true" name="preview-frame" frameborder="0" noresize="noresize"></iframe>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script type="text/javascript">
-        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-        try {
-            var pageTracker = _gat._getTracker("UA-41648493-11");
-            pageTracker._trackPageview();
-
-        } catch (err) { }
-
-        var calcHeight = function () {
-            $('#preview-frame').height($(window).height());
-        }
-
-        $(document).ready(function () {
-            calcHeight();
-        });
-
-        $(window).resize(function () {
-            calcHeight();
-        }).load(function () {
-            calcHeight();
-        });
-    </script>
+    
+    
+    http://stackoverflow.com/questions/5058008/blogger-template-language-specifications
+Blogger Objects available (case sensitive)
+http://www.threelas.com/2011/12/how-to-making-blogger-template.html
+data:blog.view - seems to be the page’s name or title but not the website’s title.
+Could not load template preview: The widget with id Blog1 is not within a section (actual parent element is: body.) Every widget should be in a section
+Could not load template preview: More than one section was found with id: main. Section IDs should be unique
+The widget with id "Blog1" cannot contain element: "#comment". A widget can only contain b:includable elements.
+<data:numPosts/>
+Objects: data:  
+         blog {
+pageTitle, //based on current url
+dynamicViewsScriptSrc, //?
+localeUnderscoreDelimited,
+view, //?
+isMobileRequest,
+blogId
+description -- Might require section and widget.
+metaDescription
+         },
+         skin {
+ vars { blitzview }, //?
+          },
+          post {
+ firstImageUrl,
+ postid,
+ url,
+ title,
+ sharePostUrl,
+ emailPostUrl,
+ firstImageUrl,
+ timestampISO8601,
+ timestamp,
+ label,
+ location {
+           mapsUrl,
+           name
+ },
+ authorPhoto {
+url
+ },
+authorAboutMe
+           },
+          label {
+             url,
+             isLast
+           },
+           top {
+      emailPostMsg,
+       showLocation
+}
+Html Syntax:
+<b:include></b> -
+<meta expr:content=’’/>
+<a expr:href></a>
+Server Stuff
+https://developers.google.com/blogger/docs/2.0/developers_guide_dotnet
+https://www.nuget.org/packages/Google.Apis.Blogger.v3/
+https://code.google.com/p/google-gdata/
+data:feedbackSurveyLink? TEMPLATE ERROR: No dictionary named: '' in: ['blog', 'skin', 'view']
+&lt;!--</body>--&gt;&lt;/body&gt;
+http://techinfoknow.com/remove-blogger-default-widgets-javascript    
 </body>
 </html>
